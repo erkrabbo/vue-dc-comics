@@ -71,7 +71,6 @@ export default {
     nav{
         display: flex;
         font-size: 10px;
-        // align-items: center;
         ul{
             list-style: none;
             display: flex;

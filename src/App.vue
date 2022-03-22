@@ -3,6 +3,7 @@
     <HeaderDc class="container"/>
     <MainContent />
     <MainContentFooter />
+    <AppFooter />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import HeaderDc from './components/HeaderDc.vue'
 import MainContent from './components/MainContent.vue'
 import MainContentFooter from './components/MainContentFooter.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderDc,
     MainContent,
-    MainContentFooter
+    MainContentFooter,
+    AppFooter
   }
 }
 </script>
