@@ -1,35 +1,11 @@
 <template>
   <div class="random">
     <ul>
-      <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-            <p>DIGITAL COMICS</p>
-          </a>
-      </li>
-      <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-merchandise.png" alt="">
-            <p>DC MERCHANDISE</p>
-          </a>
-      </li>
-      <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-            <p>SUBSCRIPTION</p>
-          </a>
-      </li>
-      <li>
-          <a href="#">
-            <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-            <p>COMIC SHOP LOCATOR</p>
-          </a>
-      </li>
-      <li>
-          <a href="#">
-            <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-            <p>DC POWER VISA</p>
-          </a>
+      <li v-for="(ele, index) in eleList" :key="index">
+        <a href="#">
+          <img :src="getImgUrl(ele.img)" alt="ele.img">
+          <p>{{ ele.text }}</p>
+        </a>
       </li>
     </ul>
   </div>
@@ -39,12 +15,34 @@
 export default {
   data () {
     return {
-      name: 'MainContentFooter'
+      name: 'MainContentFooter',
+      eleList: [
+        {
+          img: 'buy-comics-digital-comics.png',
+          text: 'DIGITAL COMICS'
+        },
+        {
+          img: 'buy-comics-merchandise.png',
+          text: 'DC MERCHANDISE'
+        },
+        {
+          img: 'buy-comics-shop-locator.png',
+          text: 'SUBSCRIPTION'
+        },
+        {
+          img: 'buy-comics-subscriptions.png',
+          text: 'COMIC SHOP LOCATOR'
+        },
+        {
+          img: 'buy-dc-power-visa.svg',
+          text: 'DC POWER VISA'
+        }
+      ]
     }
   },
   methods: {
-    getImgUrl (ele) {
-      return '../assets/img/' + ele.imgSrc
+    getImgUrl (element) {
+      return require('../assets/img/' + element)
     }
   }
 }
