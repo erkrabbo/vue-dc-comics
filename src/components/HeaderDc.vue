@@ -1,6 +1,8 @@
 <template>
   <nav>
-      <img src="../assets/img/dc-logo.png" alt="DC logo">
+      <a href="#">
+        <img src="../assets/img/dc-logo.png" alt="DC logo">
+      </a>
       <ul>
           <li v-for="(link, index) in navLinks" :key="index" @click="changeActive(index)" :class="{active: activeIndex == index}"><a :href="link.href">{{ link.text }}</a></li>
       </ul>
@@ -11,6 +13,7 @@
 export default {
   data () {
     return {
+      name: 'HeaderDc',
       activeIndex: 0,
       navLinks: [
         {
@@ -67,6 +70,7 @@ export default {
 <style scoped lang="scss">
     nav{
         display: flex;
+        font-size: 10px;
         // align-items: center;
         ul{
             list-style: none;
@@ -84,13 +88,18 @@ export default {
                 a{
                     display: block;
                     text-decoration: none;
+                    font-weight: 600;
                     color: #4d4654;
-                    padding: 1rem;
+                    padding: 0 1em;
                 }
             }
         }
-        img{
+        a{
             margin-right: auto;
+            padding: 1em;
+            img{
+                max-width: 50px;
+            }
         }
     }
 </style>

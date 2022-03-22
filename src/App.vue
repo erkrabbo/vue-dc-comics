@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <HeaderDc />
+    <HeaderDc class="container"/>
+    <MainContent />
+    <MainContentFooter />
   </div>
 </template>
 
 <script>
 import HeaderDc from './components/HeaderDc.vue'
+import MainContent from './components/MainContent.vue'
+import MainContentFooter from './components/MainContentFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderDc
+    HeaderDc,
+    MainContent,
+    MainContentFooter
   }
 }
 </script>
