@@ -97,7 +97,8 @@ ul{
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  margin-right: 1em;
+  margin-right: 2em;
+  margin-left: -1em;
   h3{
     color: white;
     margin: .3em 0;

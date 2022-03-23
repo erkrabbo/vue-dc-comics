@@ -70,7 +70,7 @@ export default {
 <style scoped lang="scss">
     nav{
         display: flex;
-        font-size: 10px;
+        font-size: 12px;
         ul{
             list-style: none;
             display: flex;
